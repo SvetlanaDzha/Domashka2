@@ -3,15 +3,31 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите число");
-int number  = Convert.ToInt32(Console.ReadLine());
+// РЕШЕНИЕ НЕВЕРНОЕ!
+//Console.WriteLine("Введите число");
+// int number  = Convert.ToInt32(Console.ReadLine());
 
 
-if (number / 100 > 0) 
+// if (number / 100 > 0) 
+// {
+//     Console.WriteLine($"Третьей цифрой числа {number} является цифра {number / 100 % 10}");
+// }
+// else 
+// {
+//     Console.WriteLine($"У числа {number} нет третьей цифры");
+// }
+
+//ВЕРНОЕ РЕШЕНИЕ:
+
+Console.Write("Введи число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+string numberX = Convert.ToString(number);
+
+if (numberX.Length > 2)
 {
-    Console.WriteLine($"Третьей цифрой числа {number} является цифра {number / 100 % 10}");
+  Console.WriteLine("третья цифра " + numberX[2]);
 }
 else 
 {
-    Console.WriteLine($"У числа {number} нет третьей цифры");
+  Console.WriteLine(" третьей цифры нет");
 }
